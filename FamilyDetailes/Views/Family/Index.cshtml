@@ -1,0 +1,102 @@
+﻿@model IEnumerable<BusinessLayer.FamilyMember>
+
+@{
+    ViewBag.Title = "Index";
+}
+<center>
+    <h2>DashBoard</h2>
+</center>
+
+<div style="margin-left:900px;">
+    <a href="@Url.Action("Logout","Login")">Logout</a>
+</div>
+
+@Html.Partial("SideNavBar")
+
+@if (Session["UserName"] == null)
+{
+    Response.Redirect("~/Login/Login");
+}
+else
+{
+   
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    using (Html.BeginForm("Index", "Family", FormMethod.Get))
+    {
+        Response.Write(Session["UserName"]);
+   
+        @*<p>
+            <b>Search By:</b> @Html.RadioButton("SearchBy", "Name", true) <text>Name</text>
+            @Html.RadioButton("SearchBy", "Gender")Gender<br /><text>Gender</text>
+            @Html.TextBox("Search")
+            <input type="submit" value="Search" />
+        </p>*@
+    }
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobileno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateoOfBirth)
+            </th>
+            <th></th>
+        </tr>
+
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                Hey There is No Family Member with the Name/Gender
+            </tr>
+        }
+
+        else
+        {
+            foreach (var item in Model)
+            {
+                using (@Html.BeginForm("Delete", "Family", new { id = item.id }))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gender)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Mobileno)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateoOfBirth)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+
+                            <input type="submit" value="Delete" onclick="return confirm('Are you Sure You Want to Delete Name =@item.Name')" />
+
+                        </td>
+                    </tr>
+                }
+            }
+        }
+
+
+    </table>
+
+}

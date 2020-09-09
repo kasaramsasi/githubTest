@@ -1,0 +1,78 @@
+﻿@model FamilyDetailes.Models.UserLogin
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<style>
+    .danger {
+        color: red;
+    }
+    .Login_Screen{
+   padding:inherit;
+   border:1px solid;
+    width: 302px;
+    height: 202px;
+    border-left-width: 1px;
+    padding-top: 0px;
+    margin-top:80px;
+    margin-bottom: 15px;
+    margin-right: 0px;
+    margin-left: 400px;
+    height:280px;
+    width:250px;
+    background-color:white;
+    
+
+        
+    }
+</style>
+<body style="background-color:#eeeeee;">
+    <center class="Login_Screen">
+        <h2>Login</h2>
+        @using (Html.BeginForm("Authorise", "Login", FormMethod.Post))
+        {
+            <div>
+                <table cellpadding="1px">
+                    <tr>
+                        <td>
+                            &nbsp;&nbsp;
+                            @Html.LabelFor(x => x.Username)
+                            @Html.TextBoxFor(x => x.Username)
+                        </td>
+                    </tr>
+                    <td class="danger">
+                        @Html.ValidationMessageFor(x => x.Username)
+                    </td>
+
+                    <tr>
+                        <td>
+                            &nbsp;&nbsp;
+                            @Html.LabelFor(x => x.Password)
+                            @Html.PasswordFor(x => x.Password)
+                        </td>
+                    </tr>
+                    <td class="danger">
+                        @Html.ValidationMessageFor(x => x.Password)
+                        @Html.DisplayFor(x => x.LoginErrorMessage)
+                        <text>New user ?</text>
+                        <a href="@Url.Action("Register","Login")">Register</a>
+                    </td>
+                   
+                    <tr>
+                        <td style="text-align:center">
+                            <br />
+                            <button type="submit" value="login">Login</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+            <script src="~/Scripts/jquery.validate.min.js"></script>
+            <script src="~/Scripts/jquery.validate.js"></script>
+            <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        }
+
+    </center>
+</body>
