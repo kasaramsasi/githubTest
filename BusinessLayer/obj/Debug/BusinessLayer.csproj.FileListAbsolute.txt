@@ -1,0 +1,11 @@
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SASIKUMAR\source\repos\FamilyDetailes\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
