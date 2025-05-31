@@ -18,7 +18,7 @@ namespace BusinessLayer
         public String City { get; set; }
         public String Mobileno { get; set; }
        
-        
+        public String FirstName { get; set; }
         public DateTime DateoOfBirth { get; set; }
 
 
